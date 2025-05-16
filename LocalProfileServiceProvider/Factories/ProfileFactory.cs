@@ -16,6 +16,7 @@ namespace LocalProfileServiceProvider.Factories
                 ZipCode = request.ZipCode,
                 City = request.City,
                 ProfilePictureUrl = request.ProfilePictureUrl,
+                Phone = request.Phone,
             };
 
             return userProfileEntity;
