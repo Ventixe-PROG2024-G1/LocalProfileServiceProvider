@@ -18,5 +18,7 @@ namespace LocalProfileServiceProvider.Data.Entities
         public string City { get; set; } = null!;
 
         public string? ProfilePictureUrl { get; set; }
+
+        public string? Phone { get; set; }
     }
 }

@@ -41,6 +41,7 @@ namespace LocalProfileServiceProvider.Services
                 ZipCode = entity.ZipCode,
                 City = entity.City,
                 ProfilePictureUrl = entity.ProfilePictureUrl,
+                Phone = entity.Phone,
             };
         }
 
@@ -67,6 +68,7 @@ namespace LocalProfileServiceProvider.Services
                     ZipCode = entity.ZipCode,
                     City = entity.City,
                     ProfilePictureUrl = entity.ProfilePictureUrl,
+                    Phone = entity.Phone,
                 };
 
                 response.Profiles.Add(profileResponse);
