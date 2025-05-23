@@ -10,11 +10,11 @@ builder.Services.AddGrpc(x =>
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
-
 builder.Services.AddDbContext<ProfileDbContext>(x =>
         x.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionStringData")));
 
 builder.Services.AddScoped<IUserProfileRepo, UserProfileRepo>();
+builder.Services.AddScoped<UserProfileService>();
 var app = builder.Build();
 
 app.MapGrpcService<UserProfileService>();

@@ -1,11 +1,12 @@
-﻿using LocalProfileServiceProvider.Data.Entities;
+﻿using LocalProfileServiceProvider.Data.DTOs;
+using LocalProfileServiceProvider.Data.Entities;
 using LocalProfileServiceProvider.Services;
 
 namespace LocalProfileServiceProvider.Factories
 {
     public class ProfileFactory
     {
-        public static UserProfileEntity Map(CreateProfileRequest request)
+        public static UserProfileEntity Map(CreateProfileRequestRest request)
         {
             var userProfileEntity = new UserProfileEntity
             {
