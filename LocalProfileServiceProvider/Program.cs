@@ -5,8 +5,8 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddGrpc(x =>
-    x.EnableDetailedErrors = true);
+//builder.Services.AddGrpc(x =>
+//    x.EnableDetailedErrors = true);
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
@@ -17,7 +17,7 @@ builder.Services.AddScoped<IUserProfileRepo, UserProfileRepo>();
 builder.Services.AddScoped<UserProfileService>();
 var app = builder.Build();
 
-app.MapGrpcService<UserProfileService>();
+//app.MapGrpcService<UserProfileService>();
 app.MapGet("/", () => "EmailServiceProvider is running.");
 app.UseHttpsRedirection();
 
