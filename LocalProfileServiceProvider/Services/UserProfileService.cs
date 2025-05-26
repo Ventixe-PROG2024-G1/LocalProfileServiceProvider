@@ -7,7 +7,7 @@ using static Grpc.Core.Metadata;
 
 namespace LocalProfileServiceProvider.Services
 {
-    public class UserProfileService(IUserProfileRepo userProfileRepo) : ProfileContract.ProfileContractBase
+    public class UserProfileService(IUserProfileRepo userProfileRepo)
     {
         private readonly IUserProfileRepo _userProfileRepo = userProfileRepo;
 
