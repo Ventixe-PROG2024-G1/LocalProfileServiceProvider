@@ -1,6 +1,8 @@
 ﻿using LocalProfileServiceProvider.Data.DTOs;
 using LocalProfileServiceProvider.Data.Entities;
+using LocalProfileServiceProvider.Data.Models;
 using LocalProfileServiceProvider.Services;
+using static Grpc.Core.Metadata;
 
 namespace LocalProfileServiceProvider.Factories
 {
@@ -21,6 +23,23 @@ namespace LocalProfileServiceProvider.Factories
             };
 
             return userProfileEntity;
+        }
+
+        public static ProfileResponseRest Map(UserProfileEntity entity)
+        {
+            var response = new ProfileResponseRest
+            {
+                Id = entity.Id,
+                FirstName = entity.FirstName,
+                LastName = entity.LastName,
+                StreetAddress = entity.StreetAddress,
+                ZipCode = entity.ZipCode,
+                City = entity.City,
+                ProfilePictureUrl = entity.ProfilePictureUrl,
+                Phone = entity.Phone,
+            };
+
+            return response;
         }
     }
 }
