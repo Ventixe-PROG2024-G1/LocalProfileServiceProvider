@@ -1,5 +1,6 @@
 using LocalProfileServiceProvider.Data.Contexts;
 using LocalProfileServiceProvider.Data.Repositories;
+using LocalProfileServiceProvider.Middlewares;
 using LocalProfileServiceProvider.Services;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +19,7 @@ var app = builder.Build();
 
 app.MapGet("/", () => "LocalProfileProvider is running.");
 app.UseHttpsRedirection();
+app.UseMiddleware<ApiKeyMiddleware>();
 
 app.UseAuthorization();
 
